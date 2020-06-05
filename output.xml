@@ -1,0 +1,27 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value=""/> 
+  <category> 
+    <coding> 
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/> 
+      <code value="vital-signs"/> 
+      <display value="Vital Signs"/> 
+    </coding> 
+  </category> 
+  <code> 
+    <coding> 
+      <system value="http://loinc.org"/> 
+      <code value="2026-3"/> 
+      <display value="VITAL APSEC(CO2)"/>
+    </coding> 
+  </code><subject> 
+    <reference value=""/> 
+  </subject> 
+  <encounter> 
+    <reference value=""/>  
+  </encounter> 
+  <effectiveDateTime value=""/> 
+<valueQuantity> 
+    <value value="0"/> 
+    <unit value="sec"/> 
+    <code value="sec"/> 
+  </valueQuantity></Observation>
