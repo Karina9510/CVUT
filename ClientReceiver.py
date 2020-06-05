@@ -6,8 +6,9 @@ import socket               # Import socket module
 from functions import getDataFromReceivedXML
 import matplotlib.pyplot as plt
 c = socket.socket()         # Create a socket object
-host = socket.gethostname() # Get local machine name
-port = 1425                 # Reserve a port for your service.
+host = socket.gethostbyname("") # Get local machine name
+port = 1540                 # Reserve a port for your service.
+print ("hostCl:", host)
 
 c.connect((host, port))
 c.settimeout(2.5)

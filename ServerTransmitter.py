@@ -4,8 +4,10 @@ from functions import hl7ToFHIR
 
 s = socket.socket()         # Create a socket object
 
-host = socket.gethostname() # Get local machine name
-port = 1425 
+host = socket.gethostbyname("") # Get local machine name
+port = 1540 
+
+print ("host:", host)
 
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, port)
 s.bind((host, port))        # Bind to the port
