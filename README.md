@@ -9,3 +9,5 @@ Reciever se pripoji na port, posle 'V' pokud chce data ve formatu HL7 V2, nebo '
 souboru (txt pro HL7 V2 nebo xml pro FHIR). Nasledne muze vykreslit nejaky parametr z zalogovaneho xml souboru dle loinc kodu.
 Transmitter odpovi na prijaty požadavek a odesle potrebna data.
 
+xmlAnalyzer.py vypisuje data z xml na zaklade loinc kodu.(k otestobani funkci GetDataFromReceivedXML)
+
