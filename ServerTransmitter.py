@@ -4,20 +4,20 @@ from functions import hl7ToFHIR
 
 s = socket.socket()         # Create a socket object
 
-host = socket.gethostbyname("") # Get local machine name
-port = 1540 
+host = socket.gethostname() # Get local machine name
+port = 1304 
 
 print ("host:", host)
 
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, port)
 s.bind((host, port))        # Bind to the port
-s.settimeout(60)
-s.listen(60)                 # Now wait for client connection.
+s.settimeout(10)
+s.listen(5)                 # Now wait for client connection.
 c, addr = s.accept()        # Establish connection with client.
 print ('Got connection from', addr)
 print ("Receiving...")
 protocol = c.recv(3)
-#c.settimeout(4)
+c.settimeout(6)
 
 if(protocol == 'V'.encode()):
     print("Sending in HL7 V2 protocol")
@@ -47,16 +47,13 @@ else:
         print ('Sending...')
         l = f.read(1024)
         while (l):
-            print ('Sending...')
+            print ('Sending...1')
             c.send(l)
             l = f.read(1024)
         f.close()
 
 print ("Done Sending")
 print ("Response received from client : ", str(c.recv(1024)))
-c.shutdown(socket.SHUT_RDWR)
-c.detach()
-c.close()
-s.shutdown(socket.SHUT_RDWR)
+
 s.detach() 
 s.close()
