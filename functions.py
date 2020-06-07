@@ -81,32 +81,7 @@ def oldToLOINC(data):
     return data
 
 from lxml import etree
- 
-#Testova funkce na parserovani
-def parseXML(xmlFile):
-    with open(xmlFile) as fobj:
-        xml = fobj.read()
-    
-    root = etree.fromstring(xml)
-    
-    for appt in root.getchildren():
-        for elem in appt.getchildren():
-            if not elem.text:
-                text = "None"
-            else:
-                text = elem.text
-            print(elem.tag + " => " + text)
-            # try:
-            #     elems = elem.getchildren()
-            #     for e in elems:
-            #         print(e.tag)
-            # except:
-            #     pass
 
-    root.append(new_entry)
-    f = open('output.xml', 'wb')
-    f.write(etree.tostring(root, pretty_print=True))
-    f.close()
 
 def getLoincXML(loinc,name):
     x =  '''  <code> 

@@ -49,9 +49,9 @@ while (l):
 # f.write("</Data>".encode('utf-8'))
 # f.close()
 
-data = getDataFromReceivedXML('Test2.xml','8867-4')
-plt.plot(data)
-plt.show()
+# data = getDataFromReceivedXML('Test2.xml','8867-4')
+# plt.plot(data)
+# plt.show()
 
 
 c.detach()
