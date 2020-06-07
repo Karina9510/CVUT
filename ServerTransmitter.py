@@ -5,7 +5,7 @@ from functions import hl7ToFHIR
 s = socket.socket()         # Create a socket object
 
 host = socket.gethostname() # Get local machine name
-port = 1304 
+port = 1305 
 
 print ("host:", host)
 

@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 c = socket.socket()         # Create a socket object
 host = socket.gethostname() # Get local machine name
-port = 1304                 # Reserve a port for your service.
+port = 1305                 # Reserve a port for your service.
 print ("hostCl:", host)
 
 c.connect((host, port))

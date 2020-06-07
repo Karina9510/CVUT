@@ -92,7 +92,7 @@ plt.show()
 for index,i in enumerate(ulozeniMSA):
     if index<len(seznam_pacientID):
         nazev=str(seznam_pacientID[index])
-        nazev+=".txt"
+        nazev+="Loinc.txt"
     
     if os.path.isfile(nazev)== True and index<len(ulozeniMSA)-1:
         Pridat(nazev,VytvorData(ulozeniMSA[index],ulozeniMSA[index+1],h))
